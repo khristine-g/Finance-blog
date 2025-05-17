@@ -1,0 +1,85 @@
+.data-analysis-section {
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  margin: 4rem auto;
+  width: 95%;
+  overflow: hidden;
+}
+
+.data-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.data-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.data-content {
+  flex: 1 1 50%;
+}
+
+.data-intro {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.data-intro h2 {
+  font-size: 2.4rem;
+  color: #093659;
+  margin-bottom: 1rem;
+}
+
+.data-intro p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.data-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.data-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.data-card h3 {
+  color: #0d1b2a;
+  margin: 1rem 0 0.6rem;
+}
+
+.data-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.icon {
+  font-size: 2.8rem;
+  color: #0e76a8;
+  margin-bottom: 0.8rem;
+}
+

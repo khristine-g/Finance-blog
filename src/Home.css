@@ -1,0 +1,101 @@
+.home-hero {
+    position: relative;
+    height: 100vh; /* Fill full screen */
+    width: 100vw;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  
+  /* Full-screen background video */
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5) blur(1px);
+    
+  }
+  
+  /* Dark overlay over video */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: rgba(0, 0, 0, 0.55); */
+
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  /* Text content */
+  .home-hero-content {
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeSlideIn 4.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeSlideIn {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .home-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .home-hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+  }
+  
+  /* Button */
+  .home-discover-btn {
+    padding: 0.8rem 2rem;
+    background-color: #0e76a8;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .home-discover-btn:hover {
+    background-color: #095b84;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
+  

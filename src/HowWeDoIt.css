@@ -1,0 +1,105 @@
+.how-wrapper {
+    position: relative;
+  
+    padding: 100px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .how-container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+  
+  .how-title {
+    flex: 1;
+    font-size: 46px;
+   
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+    min-width: 280px;
+  }
+  
+  .how-description {
+    flex: 2;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    max-width: 700px;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+
+  }
+  
+  .how-indicator {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 60px;
+    z-index: 2;
+  }
+  
+  .how-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1d3557;
+  }
+  
+  .circle {
+    width: 48px;
+    height: 48px;
+    background-color: #0e76a8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .arrow-icon {
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Decorative background blur */
+  .background-blur {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #a8dadc, transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .how-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .how-title {
+      font-size: 32px;
+    }
+  
+    .how-description {
+      font-size: 16px;
+    }
+  
+    .how-indicator {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  
+  
