@@ -1,76 +1,129 @@
 .transformation-section {
-    position: relative;
-    padding: 6rem 2rem;
-    color: white;
-    overflow: hidden;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-  }
-  
-  .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 14, 33, 0.7);
-    z-index: -1;
-  }
-  
-  .content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
+  position: relative;
+  padding: 4rem 1rem 6rem; /* Adjust padding for smaller screens */
+  color: white;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 14, 33, 0.7);
+  z-index: -1;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Headings */
+.main-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  padding: 0 1rem;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #ddd;
+  padding: 0 1rem;
+}
+
+/* Grid */
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Cards */
+.idea-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.idea-card:hover {
+  transform: scale(1.05);
+}
+
+.idea-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.idea-card p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive typography and layout tweaks */
+@media (max-width: 900px) {
   .main-heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.3;
+    font-size: 2rem;
   }
-  
   .intro-text {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    color: #ddd;
-  }
-  
-  .ideas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-  
-  .idea-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 20px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  .idea-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    color: #fff;
-  }
-  
-  .idea-card p {
-    color: #ccc;
     font-size: 1rem;
-    line-height: 1.5;
   }
-  
+  .idea-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .transformation-section {
+    padding: 3rem 1rem 4rem;
+    min-height: auto;
+  }
+  .main-heading {
+    font-size: 1.6rem;
+  }
+  .intro-text {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .ideas-grid {
+    gap: 1.5rem;
+  }
+  .idea-card {
+    padding: 1.25rem 1rem;
+  }
+  .idea-card h3 {
+    font-size: 1.1rem;
+  }
+  .idea-card p {
+    font-size: 0.9rem;
+  }
+}

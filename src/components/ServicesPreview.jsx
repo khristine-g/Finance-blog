@@ -1,29 +1,28 @@
-// Services.jsx
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaChevronRight } from "react-icons/fa";
-import services from "../data/services";
+import  services  from "../data/services";
 import "../Services.css";
 
+const ServicesPreview = () => {
+  const navigate = useNavigate();
+  const previewServices = services.slice(0, 3);
 
-
-const Services = () => {
   return (
     <div className="services-wrapper">
-      {/* Top Banner */}
-      <div className="services-banner">
+      <div className="preview-services-banner">
         <motion.div
-          className="services-banner-content"
+          className="preview-services-banner-content"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p>Services</p>
-          <h1>Discover all services</h1>
+        
+          <h1 className="preview-header">Explore Top Services</h1>
         </motion.div>
       </div>
 
-      {/* Services Grid */}
       <motion.div
         className="services-grid"
         initial="hidden"
@@ -31,7 +30,7 @@ const Services = () => {
         viewport={{ once: true }}
         transition={{ staggerChildren: 0.2 }}
       >
-        {services.map((service, index) => (
+        {previewServices.map((service, index) => (
           <motion.div
             key={index}
             className="service-card"
@@ -62,9 +61,17 @@ const Services = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      <div className="text-center mt-8">
+        <button
+          onClick={() => navigate("/services")}
+          className="services-button"
+        >
+          View All Services
+        </button>
+      </div>
     </div>
   );
 };
 
-export default Services;
-
+export default ServicesPreview;

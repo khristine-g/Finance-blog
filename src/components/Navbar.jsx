@@ -7,6 +7,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navLinks = [ 'Home','About', 'Services', 'Insights', 'Blogs', 'Contact'];
 
+  React.useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
+  }, [menuOpen]);
+  
+
   return (
     <nav className="navbar">
       <div className="navbar-container">

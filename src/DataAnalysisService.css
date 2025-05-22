@@ -5,8 +5,12 @@
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
   margin: 4rem auto;
   width: 95%;
+  max-width: 1300px;
   overflow: hidden;
+  
 }
+
+
 
 .data-grid {
   display: flex;
@@ -23,6 +27,7 @@
 
 .data-image img {
   max-width: 100%;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
@@ -83,3 +88,73 @@
   margin-bottom: 0.8rem;
 }
 
+/* ========== RESPONSIVE STYLES ========== */
+
+@media (max-width: 1024px) {
+  .data-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .data-image,
+  .data-content {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .data-intro h2 {
+    font-size: 2rem;
+  }
+
+  .data-intro p {
+    font-size: 1rem;
+  }
+
+  .data-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .data-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .data-card {
+    padding: 1.5rem;
+  }
+
+  .icon {
+    font-size: 2.4rem;
+  }
+
+  .data-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .data-intro p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-analysis-section {
+    padding: 2rem 1rem;
+  }
+
+  .data-intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .data-intro p {
+    font-size: 0.9rem;
+  }
+
+  .data-card {
+    padding: 1.2rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+}

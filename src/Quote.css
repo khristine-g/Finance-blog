@@ -1,47 +1,74 @@
 .quote-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .quote-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    filter: brightness(0.5);
-  }
-  
-  .quote-overlay {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.quote-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.5);
+}
+
+.quote-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.quote-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(4px);
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ccc;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
   .quote-text {
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    backdrop-filter: blur(4px);
-    padding: 1rem 2rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 1rem;
+    font-size: 1.8rem;
+    padding: 1rem;
   }
-  
+
   .quote-author {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #ccc;
+    font-size: 1rem;
   }
-  
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .quote-text {
+    font-size: 1.3rem;
+    padding: 0.8rem;
+  }
+
+  .quote-author {
+    font-size: 0.95rem;
+  }
+}

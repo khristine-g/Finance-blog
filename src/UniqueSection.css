@@ -1,22 +1,25 @@
 .unique-section {
   padding: 6rem 2rem;
   background: #f9f9f9;
+  /* Make sure padding scales on smaller screens */
 }
 
-/* FLEX wrapper added */
 .unique-flex-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
-  
-  width: 70vw;
+  gap: 2.5rem;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
+  /* Fluid width with max constraint */
 }
 
-.unique-left, .unique-right {
+.unique-left,
+.unique-right {
   flex: 1 1 50%;
-  min-width: 300px;
+  min-width: 280px;
+  /* minimum to avoid too narrow on tiny screens */
 }
 
 .unique-video {
@@ -24,20 +27,22 @@
   max-height: 450px;
   border-radius: 20px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
 .unique-right h2 {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
   margin-bottom: 1rem;
   font-weight: 700;
   color: #0e76a8;
 }
 
 .intro-text {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #444;
   margin-bottom: 2rem;
   max-width: 600px;
+  line-height: 1.5;
 }
 
 .tab-buttons {
@@ -54,7 +59,7 @@
   color: #0e76a8;
   border-radius: 30px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 2vw, 1rem);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -72,15 +77,19 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   min-height: 150px;
   max-width: 600px;
-}
-
-.animated-tab-text {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   color: #333;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* Responsive stacking */
+/* Responsive stacking for tablets and smaller */
+@media (max-width: 1024px) {
+  .unique-flex-wrapper {
+    gap: 2rem;
+  }
+}
+
+/* Stacking and resizing for smaller screens */
 @media (max-width: 768px) {
   .unique-flex-wrapper {
     flex-direction: column;
@@ -92,5 +101,55 @@
 
   .unique-video {
     max-height: 300px;
+  }
+
+  .tab-content {
+    max-width: 100%;
+  }
+}
+
+/* Ultra small devices like phones */
+@media (max-width: 480px) {
+  .unique-section {
+    padding: 4rem 1rem;
+  }
+
+  .unique-right h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .tab-buttons {
+    justify-content: center;
+  }
+
+  .tab-buttons button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .tab-content {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Larger screens adjustments */
+@media (min-width: 1400px) {
+  .unique-flex-wrapper {
+    width: 80%;
+    gap: 4rem;
+  }
+
+  .unique-right h2 {
+    font-size: 3.5rem;
+  }
+
+  .unique-video {
+    max-height: 550px;
   }
 }

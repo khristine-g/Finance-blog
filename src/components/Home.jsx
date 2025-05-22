@@ -3,9 +3,9 @@ import Portfolio from './Portfolio';
 import DataAnalysisService from './DataAnalysisService';
 import TransformationIdeas from './TransformationIdeas';
 import UniqueSection from './UniqueSection';
-import About from './About';
 import HowWeDoIt from './HowWeDoIt';
 import Insights from './Insights';
+import ServicesPreview from "./ServicesPreview"
 import Quote from './Quote';
 import '../Home.css';
 
@@ -31,13 +31,14 @@ const Home = () => {
         </div>
       </div>
     </div>
+    <ServicesPreview />
     <Portfolio />
    
     <HowWeDoIt />
     <Quote />
     <Insights />
     <DataAnalysisService />
-  <About />
+
     <TransformationIdeas />
     <UniqueSection />
     
